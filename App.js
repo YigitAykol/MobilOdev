@@ -6,7 +6,7 @@ import * as Font from 'expo-font';
 import * as SplashScreen from "expo-splash-screen";
 import React, { useState, useEffect } from 'react';
 import BottomTabNavigation from './navigation/BottomTabNavigation'; // Adjust the path as per your file structure
-import {Cart} from './screens';
+import {Cart, ProductDetails} from './screens';
 
 
 const Stack = createNativeStackNavigator();
@@ -50,6 +50,11 @@ export default function App() {
           options={{headerShown:false}}
         />
 
+        <Stack.Screen
+          name='ProductDetails'
+          component={ProductDetails}
+          options={{headerShown:false}}
+        />
 
 
       </Stack.Navigator>
